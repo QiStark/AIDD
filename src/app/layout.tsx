@@ -13,11 +13,11 @@ export const metadata = {
   description: selfConfig.description,
   icons: {
     icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },
-      { url: '/icon.ico' },
+      { url: '/MyBlog/icon.svg', type: 'image/svg+xml' },
+      { url: '/MyBlog/icon.ico' },
     ],
-    shortcut: '/icon.ico',
-    apple: '/icon.svg',
+    shortcut: '/MyBlog/icon.ico',
+    apple: '/MyBlog/icon.svg',
   },
 }
 
