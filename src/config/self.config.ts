@@ -18,7 +18,7 @@ const selfConfig: SiteConfig = {
   description: '日拱一卒，功不唐捐',
   author: 'Dingqi',
   language: 'zh-CN',
-  siteUrl: 'https://pzweuj.github.io/MyBlog',
+  siteUrl: 'https://qistark.github.io/MyBlog',
 
   social: {
     github: 'https://github.com/QiStark',
