@@ -11,14 +11,6 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: selfConfig.title,
   description: selfConfig.description,
-  icons: {
-    icon: [
-      { url: '/MyBlog/icon.svg', type: 'image/svg+xml' },
-      { url: '/MyBlog/icon.ico' },
-    ],
-    shortcut: '/MyBlog/icon.ico',
-    apple: '/MyBlog/icon.svg',
-  },
 }
 
 export default function RootLayout({
