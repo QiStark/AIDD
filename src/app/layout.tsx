@@ -12,8 +12,12 @@ export const metadata = {
   title: selfConfig.title,
   description: selfConfig.description,
   icons: {
-    icon: '/icon.ico',
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon.ico' },
+    ],
     shortcut: '/icon.ico',
+    apple: '/icon.svg',
   },
 }
 
