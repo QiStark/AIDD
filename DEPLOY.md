@@ -29,6 +29,8 @@ git add -A && git commit -m "post: 新增/更新内容" && git push origin main
 - `public/` 里的静态资源在代码中引用时要手动加 `/MyBlog` 前缀（如 `metadata.icons`、`<img src>`）。
   `next/link` 会自动加 basePath，但 metadata 与原始 HTML 标签不会。
 - favicon 路径例：`icon: '/MyBlog/icon.svg'`，写成 `/icon.svg` 会在静态导出后 404。
+- **`src/app/favicon.*` / `src/app/icon.*` 文件约定在 `output: 'export'` 下可能不被复制到 `out/`，导致线上 404。**
+  推荐做法：把图标放 `public/<name>.<ext>`，在 `metadata.icons` 里手动写 `/MyBlog/<name>.<ext>`。
 
 ## 查看部署状态
 
