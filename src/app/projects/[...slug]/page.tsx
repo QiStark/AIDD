@@ -38,11 +38,16 @@ export default async function ProjectDocPage({ params }: Props) {
 
 export async function generateStaticParams() {
   const chapters = await getProjectDocs()
-  return chapters.flatMap(chapter => 
+  const params = chapters.flatMap(chapter =>
     chapter.docs.map(doc => ({
       slug: doc.slug.split('/')
     }))
   )
+  // output: export 要求动态路由至少返回一条静态路径；
+  // 无项目文档时用占位路径，访问时由 notFound() 兜底。
+  return params.length > 0
+    ? params
+    : [{ slug: ['_placeholder'] }]
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
